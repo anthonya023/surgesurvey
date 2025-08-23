@@ -43,21 +43,25 @@ class MyApp extends StatelessWidget {
         title: 'Surge Survey',
         themeMode: ThemeMode.dark,
         darkTheme: ThemeData.dark().copyWith(
-          textTheme: GoogleFonts.antonTextTheme(
-            ThemeData.dark().textTheme.apply(
-              bodyColor: Colors.white,
-              displayColor: Colors.white,
-            ),
-          ),
+          textTheme:
+              GoogleFonts.bebasNeueTextTheme(
+                ThemeData.dark().textTheme.apply(bodyColor: Colors.white, displayColor: Colors.white),
+              ).copyWith(
+                // Fallback for Android
+                bodyLarge: GoogleFonts.bebasNeue(fontSize: 16, color: Colors.white),
+                headlineLarge: GoogleFonts.bebasNeue(fontSize: 32, color: Colors.white, fontWeight: FontWeight.bold),
+              ),
         ),
         theme: ThemeData(
           primarySwatch: Colors.blue,
-          textTheme: GoogleFonts.antonTextTheme(
-            ThemeData.light().textTheme.apply(
-              bodyColor: Colors.black,
-              displayColor: Colors.black,
-            ),
-          ),
+          textTheme:
+              GoogleFonts.bebasNeueTextTheme(
+                ThemeData.light().textTheme.apply(bodyColor: Colors.black, displayColor: Colors.black),
+              ).copyWith(
+                // Fallback for Android
+                bodyLarge: GoogleFonts.bebasNeue(fontSize: 16, color: Colors.black),
+                headlineLarge: GoogleFonts.bebasNeue(fontSize: 32, color: Colors.black, fontWeight: FontWeight.bold),
+              ),
         ),
         debugShowCheckedModeBanner: false,
         routerConfig: router,
