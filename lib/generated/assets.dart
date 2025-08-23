@@ -2,11 +2,8 @@
 class Assets {
   Assets._();
 
-  static const String iconIcFlash = 'assets/icon/ic_flash.png';
-  static const String iconIcNewSurvey = 'assets/icon/ic_new_survey.png';
-  static const String iconIcPhone = 'assets/icon/ic_phone.png';
-  static const String iconIcProjectFiles = 'assets/icon/ic_project_files.png';
-  static const String iconIcResearch = 'assets/icon/ic_research.png';
+  static const String logoLauncherIcon = 'assets/image/logo/launcher_icon.png';
   static const String logoOmegaPower = 'assets/image/logo/omega_power.png';
   static const String logoSurgeSurvey = 'assets/image/logo/surge_survey.png';
+
 }
