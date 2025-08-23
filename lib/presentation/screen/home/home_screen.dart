@@ -10,7 +10,6 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Colors.black,
       body: SafeArea(
         child: Column(
           children: [
