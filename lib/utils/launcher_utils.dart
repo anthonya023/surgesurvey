@@ -18,8 +18,12 @@ class LauncherUtils {
 
   static Future<void> _launchPhoneCall({required String phoneNumber}) async {
     try {
-      final Uri launchUri = Uri(scheme: 'tel', path: phoneNumber);
-      await launchUrl(launchUri);
+      final Uri uri = Uri(scheme: 'tel', path: phoneNumber);
+      if (await canLaunchUrl(uri)) {
+        await launchUrl(uri);
+      } else {
+        LoadingUtils.showError('Could not launch $uri');
+      }
     } catch (e) {
       LoadingUtils.showError('Failed to make phone call: $e');
     }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:surgesurvey/navigation/app_navigator.dart';
 import 'package:surgesurvey/utils/app_constants.dart';
 import 'package:surgesurvey/utils/launcher_utils.dart';
 import 'package:surgesurvey/utils/loading_utils.dart';
@@ -17,7 +18,7 @@ class MainButtonsWidget extends StatelessWidget {
         ActionButtonWidget(
           icon: Icons.search,
           title: 'RESEARCH',
-          onTap: () => LauncherUtils.launchURL(AppConstants.omegaAppHomePage,mode: LaunchMode.inAppBrowserView),
+          onTap: () => LauncherUtils.launchURL(AppConstants.omegaAppHomePage, mode: LaunchMode.inAppBrowserView),
         ),
         const Gap(30),
         ActionButtonWidget(
@@ -26,7 +27,7 @@ class MainButtonsWidget extends StatelessWidget {
           onTap: () => LoadingUtils.showInfo("In Progress"),
         ),
         const Gap(30),
-        ActionButtonWidget(icon: Icons.add_box, title: 'NEW SURVEY', onTap: () => LoadingUtils.showInfo("In Progress")),
+        ActionButtonWidget(icon: Icons.add_box, title: 'NEW SURVEY', onTap: () => AppNavigator.goToSurvey(context)),
       ],
     );
   }
