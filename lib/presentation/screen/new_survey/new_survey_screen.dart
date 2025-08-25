@@ -5,9 +5,9 @@ import 'package:surgesurvey/core/di/injection.dart';
 import 'package:surgesurvey/presentation/screen/new_survey/controller/controller.dart';
 import 'package:surgesurvey/presentation/screen/new_survey/widgets/newsurvey_bottom_back_next.dart'
     show NewSurveyBottomBackNext;
-import 'package:surgesurvey/presentation/screen/new_survey/step/survey_step1_body.dart';
-import 'package:surgesurvey/presentation/screen/new_survey/step/survey_step2_body.dart';
-import 'package:surgesurvey/presentation/screen/new_survey/step/survey_step3_body.dart';
+import 'package:surgesurvey/presentation/screen/new_survey/widgets/step/survey_step1_body.dart';
+import 'package:surgesurvey/presentation/screen/new_survey/widgets/step/survey_step2_body.dart';
+import 'package:surgesurvey/presentation/screen/new_survey/widgets/step/survey_step3_body.dart';
 import 'package:surgesurvey/core/enums/survey_enums.dart';
 
 class NewSurveyScreen extends StatelessWidget {
